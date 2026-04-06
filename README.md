@@ -17,7 +17,7 @@
 - Ý tưởng: Xây dựng giao diện có sẵn với Java Swing và thư viện java.awt để vẽ và xử lý sự kiện
 
 #### Câu 1: Xây dựng cửa sổ Flappy Bird và đặt ảnh nền.
-- Cách thực hiện: Sử dụng JFrame để vẽ khung cố định 360x640 cho game. Dùng 'setResizable(false)' để khóa bố cục game lại, tránh ảnh hưởng tọa độ.
+- Cách thực hiện: Sử dụng JFrame để vẽ khung cố định 360x640 cho game. Dùng `setResizable(false)` để khóa bố cục game lại, tránh ảnh hưởng tọa độ.
 - Code thực thi:
 ```
  setTitle("Flappy Bird");
@@ -51,8 +51,8 @@
 
 #### Câu 3: Thiết lập gameloop và Pipe cho trò chơi
 - Ý tưởng: Xây dựng vòng lặp game chạy liên tục để tính toán lại vị trí của chim và cột để thực hiện vẽ lại màn hình. Đối với Pipe, xây dựng các hàm để tính toán và tạo ngẫu nhiên vị trí Y của các cột để chim có thể bay qua.
-- Cách thực hiện: Khởi tạo class Pipe và ArrayList để lưu vị trí các cột, xây dựng hàm tính toán cột trên bằng 'Math.random()' và tạo khoảng trống bằng 0.3 chiều cao của màn hình để chim có thể bay qua. Sau đó, viết tiếp các hàm kiểm tra tọa độ của bird và cột để xem bird có đụng phải cột hoặc đã đi qua các cột hay chưa.
+- Cách thực hiện: Khởi tạo class Pipe và ArrayList để lưu vị trí các cột, xây dựng hàm tính toán cột trên bằng `Math.random()` và tạo khoảng trống bằng 0.3 chiều cao của màn hình để chim có thể bay qua. Sau đó, viết tiếp các hàm kiểm tra tọa độ của bird và cột để xem bird có đụng phải cột hoặc đã đi qua các cột hay chưa.
 
 #### Câu 4: Thực hiện cơ chế tính điểm và restart trò chơi
 - Ý tưởng: Tạo biến đếm điểm cho trò chơi, kết hợp với nút trên bàn phím khi có logic đụng độ hoặc chim rơi xuống đất, trong trường hợp trên trò chơi sẽ kết thúc, điểm và vị trí bird sẽ reset về lại 0. Ngoài ra, để tăng độ khó trò chơi, mỗi pipe khi dưới 10 điểm sẽ dịch chuyển 1 khoảng thấp, sau đó sẽ dịch chuyển nhanh hơn để người chơi khó bay qua.
-- Cách thực hiện: Tạo biến 'score' và 'gameOver' để quản lý điểm và vận hành trò chơi. Khi trò chơi kết thúc, kiểm tra gameOver và nếu có sự kiện từ bàn phím (Trong trường hợp này là nút R) sẽ restart trò chơi.
+- Cách thực hiện: Tạo biến `score` và `gameOver` để quản lý điểm và vận hành trò chơi. Khi trò chơi kết thúc, kiểm tra gameOver và nếu có sự kiện từ bàn phím (Trong trường hợp này là nút R) sẽ restart trò chơi.
