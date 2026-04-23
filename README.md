@@ -56,3 +56,15 @@
 #### Câu 4: Thực hiện cơ chế tính điểm và restart trò chơi
 - Ý tưởng: Tạo biến đếm điểm cho trò chơi, kết hợp với nút trên bàn phím khi có logic đụng độ hoặc chim rơi xuống đất, trong trường hợp trên trò chơi sẽ kết thúc, điểm và vị trí bird sẽ reset về lại 0. Ngoài ra, để tăng độ khó trò chơi, mỗi pipe khi dưới 10 điểm sẽ dịch chuyển 1 khoảng thấp, sau đó sẽ dịch chuyển nhanh hơn để người chơi khó bay qua.
 - Cách thực hiện: Tạo biến `score` và `gameOver` để quản lý điểm và vận hành trò chơi. Khi trò chơi kết thúc, kiểm tra gameOver và nếu có sự kiện từ bàn phím (Trong trường hợp này là nút R) sẽ restart trò chơi.
+
+
+### LAB3: Xây dựng giao diện Thương mại điện tử
+
+#### Câu 1: Xây dụng bố cục mẫu
+- Ý tưởng: Chia layout thành 2 main Panel: Left và Right. Sau đó define class Product lưu thông tin sản phẩm, thực hiện xây dựng bố cục và viết hàm set các dữ liệu thông qua JLabel.
+
+#### Câu 2: Xây dựng tương tác click chuột.
+- Ý tưởng: Thực hiện AddMouseListenr thông qua class `MouseAdapter`, sau đó Override các phương thức MouseEnter và MouseExit, update lại viền bằng `setBorder`, sử dụng `CompoundBorder` để vẽ line border và padding cho từng thẻ sản phẩm.
+
+#### Câu 3: Xây dựng animation
+- Xây dựng một class tùy chỉnh ImageLabel kế thừa trực tiếp từ JLabel. Ghi đè phương thức vẽ đồ họa paintComponent và sử dụng AlphaComposite để can thiệp vào độ trong suốt của ảnh. Thiết lập một bộ đếm javax.swing.Timer chạy lặp mỗi 20ms. Mỗi khi click chọn sản phẩm mới, Timer sẽ kích hoạt để tăng dần biến độ mờ (alpha) từ 0 đến 1.
